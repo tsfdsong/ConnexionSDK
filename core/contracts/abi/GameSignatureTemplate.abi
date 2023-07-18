@@ -1,0 +1,188 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "wallet_",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "contract_",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "eqID_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "nonce_",
+				"type": "uint256"
+			}
+		],
+		"name": "gameMint",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "wallet_",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "contract_",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "nonce_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "eqID_",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint128[]",
+				"name": "attrIDs_",
+				"type": "uint128[]"
+			},
+			{
+				"internalType": "uint128[]",
+				"name": "attrValues_",
+				"type": "uint128[]"
+			}
+		],
+		"name": "gameMintLoot",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_wallet",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_this",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_token",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokenID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_nonce",
+				"type": "uint256"
+			}
+		],
+		"name": "upChain",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_wallet",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_this",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "_token",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_tokenID",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_nonce",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint128[]",
+				"name": "_attrIDs",
+				"type": "uint128[]"
+			},
+			{
+				"internalType": "uint128[]",
+				"name": "_attrValues",
+				"type": "uint128[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "_attrIndexesUpdate",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint128[]",
+				"name": "_attrValuesUpdate",
+				"type": "uint128[]"
+			},
+			{
+				"internalType": "uint256[]",
+				"name": "_attrIndexesRMs",
+				"type": "uint256[]"
+			}
+		],
+		"name": "upChainLoot",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "pure",
+		"type": "function"
+	}
+]

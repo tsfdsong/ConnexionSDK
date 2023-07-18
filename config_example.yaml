@@ -1,0 +1,145 @@
+NodeURL:
+  - 'https://data-seed-prebsc-1-s3.binance.org:8545'
+ZKNodeURL:
+  - 'https://testnet.era.zksync.dev'
+GraphClientPoolSize: 10
+HttpPoolSize: 10
+APIDelayTime: 60
+EmailCodeExpireTime: 60
+FTDepositWithdrawRedisLockTime: 30
+KeyExpireTime: 1800
+KeyNoExpireTime: 604800
+MarketplaceContract: '0x84C765E6E885c53d179511FCFA459519B8fDF908'
+MarketplaceGraph: 'https://api.thegraph.com/subgraphs/name/connectorgamefi/connextion_market_test'
+GameLootEquipmentGraph: 'https://api.thegraph.com/subgraphs/name/connectorgamefi/connexion_assets_test'
+BlindBoxImage: 'https://ipfs.io/ipfs/QmcKYNetqdWnbec4QzMN9fY8VkY4fshRSdrXtfkytTYCSG'
+GameEquipmentName: ArchLootPart
+AdminNodeURL: 'https://open.larksuite.com/open-apis/bot/v2/hook/2aa09250-09bc-46d0-85f4-38e924b5fe51'
+
+GameConfig:
+  1: 
+    FilterConfig:
+      NodeURL:
+        - 'https://data-seed-prebsc-1-s3.binance.org:8545'
+      ListenerType: 'ETH_TREASURE'
+      EfficientBlockNum: 5
+      InitFilterLogHeight: 24491489
+      ParseLogSwitch: true
+      ParseLogsInterval: 10
+      TxConfirmedInterval: 20
+      BlockHeightInterval: 2000
+      SkipCheckOrphanNum: 12
+      Events: 
+        - Type: 'ERC20_DEPOSIT'
+          Topic: '0xf0f5a6096b2a43fc10bc314148e9ac3851fd8455384682f3c3cd9d2f0bc71b17'
+        - Type: 'ERC20_WITHDRAW'
+          Topic: '0xc603e3a56e4b1f9c71cf99ec62d824c6e4ff919af5a6dd3885c82b9d497b5cc7'
+        - Type: 'NFT_LOOT_WITHDRAW'
+          Topic: '0x9561a8e4f5d28e8cc84227248daa23dbb2560e390340a9424a3447303a56e3f7'
+        - Type: 'NFT_GAME_MINT'
+          Topic: '0x3478ef94fb18ff913d9966a0ce3c6168579d4c38f7c856e8ae9d40ab9720b717'
+        - Type: 'NFT_WITHDRAW'
+          Topic: '0x5560e2fe30c6e118818d212511a41d156e9da59318adc954739e60358780cec4'
+        - Type: 'NFT_DEPOSIT'
+          Topic: '0xdf194dfab570e662896f8c8670a8a17541328d72a4d3fc02210becbf3d0be2f8'
+  2: 
+    FilterConfig:
+      NodeURL:
+        - 'https://testnet.era.zksync.dev'
+      ListenerType: 'ZK_TREASURE'
+      EfficientBlockNum: 5
+      InitFilterLogHeight: 24491489
+      ParseLogSwitch: true
+      ParseLogsInterval: 10
+      TxConfirmedInterval: 20
+      BlockHeightInterval: 2000
+      SkipCheckOrphanNum: 12
+      Events: 
+        - Type: 'ERC20_DEPOSIT'
+          Topic: '0xf0f5a6096b2a43fc10bc314148e9ac3851fd8455384682f3c3cd9d2f0bc71b17'
+        - Type: 'ERC20_WITHDRAW'
+          Topic: '0xc603e3a56e4b1f9c71cf99ec62d824c6e4ff919af5a6dd3885c82b9d497b5cc7'
+        - Type: 'NFT_LOOT_WITHDRAW'
+          Topic: '0x9561a8e4f5d28e8cc84227248daa23dbb2560e390340a9424a3447303a56e3f7'
+        - Type: 'NFT_GAME_MINT'
+          Topic: '0x3478ef94fb18ff913d9966a0ce3c6168579d4c38f7c856e8ae9d40ab9720b717'
+        - Type: 'NFT_WITHDRAW'
+          Topic: '0x5560e2fe30c6e118818d212511a41d156e9da59318adc954739e60358780cec4'
+        - Type: 'NFT_DEPOSIT'
+          Topic: '0xdf194dfab570e662896f8c8670a8a17541328d72a4d3fc02210becbf3d0be2f8'
+
+SignConfig:
+  SignaturePublicFile: ./pub.pem
+  SignServerURL: 'http://127.0.0.1:8085'
+  SignResultServerURL: 'http://127.0.0.1:8086'
+  SignRequestNum: 100
+HTTPSConfig:
+  CertFile: ./cert.pem
+  KeyFile: ./key.pem
+ServerConfig:
+  RunMode: info
+  HttpPort: '8888'
+  ReadTimeout: 0
+  WriteTimeout: 0
+  JWTExpireTimeMinute: 43200
+  JWTSecret: connexion.games
+  TLSCAFile: ./test.pem
+  TLSCAKey: ./test.key
+  LogOut: stdout
+MysqlConfig:
+  UseCA: false
+  IP: 34.81.246.151
+  SSHPort: 22
+  SSHAccount: ''
+  SSHKey: ''
+  ConnPort: 3306
+  Account: root
+  Password: K20kyfl2*g
+  SqlName: connexionSDK
+  MaxOpenConns: 100
+  MaxIdleConns: 20
+  MaxLifetime: 3600
+RedisConfig:
+  UseCA: false
+  IP: ''
+  SSHPort: 22
+  SSHAccount: ''
+  SSHKey: ''
+  Name: ''
+  Password: cqrZa!snY4
+  Host: '34.81.246.151:6379'
+  DB: 0
+  MinIdleConns: 20
+MiddlewareLogConfig:
+  VisitLogFile: ./log/visit.log
+  RecoverLogFile: ./log/recover.log
+  SkipPath: []
+NetworkChain:
+  bsc-test: 97
+  rinkeby: 4
+  ethereum: 1
+  bsc: 56
+ChainToken:
+  '1':
+    TokenName: ETH
+    Decimal: 18
+  '4':
+    TokenName: ETH
+    Decimal: 18
+  '56':
+    TokenName: BNB
+    Decimal: 18
+  '97':
+    TokenName: BNB
+    Decimal: 18
+SkyWalkingConfig:
+  ServerName: gosdk-test
+  SkyRPCNode: '192.168.6.5:11800'
+  KeyGameWithdraw: gameWithdraw
+  KeyRiskReview: riskReview
+  KeyWithdraw: withdraw
+  ValueGameWithdraw: gameserver/withdraw
+  ValueRiskReview: adminserver/riskReview
+  ValueWithdraw: dashboard/prewithdraw
+AssetSortConfig: '{"ArchLootPart":10,"BOSSChest":9,"CommonChest":8,"RepairingPotion":7}'
+PassAssetConfig: '{"AdventurerPass":"26092","CollectorPass":"26093","GoblinPass":"26090"}'

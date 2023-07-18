@@ -1,0 +1,99 @@
+NodeURL:
+  - 'https://data-seed-prebsc-1-s1.binance.org:8545'
+ZKNodeURL:
+  - 'https://testnet.era.zksync.dev'
+GraphClientPoolSize: 10
+HttpPoolSize: 10
+APIDelayTime: 60
+EmailCodeExpireTime: 60
+FTDepositWithdrawRedisLockTime: 30
+KeyExpireTime: 1800
+KeyNoExpireTime: 604800
+MarketplaceContract: '0xf1b72E14AB69DBcb39DB11796044278eBAE2D08a'
+MarketplaceGraph: 'https://api.thegraph.com/subgraphs/name/connectorgamefi/connextion_market_test'
+GameLootEquipmentGraph: 'https://api.thegraph.com/subgraphs/name/connectorgamefi/connexion_assets_test'
+BlindBoxImage: 'https://ipfs.io/ipfs/QmcKYNetqdWnbec4QzMN9fY8VkY4fshRSdrXtfkytTYCSG'
+GameEquipmentName: ArchLootPart
+AdminNodeURL: 'https://open.larksuite.com/open-apis/bot/v2/hook/898e9772-a57a-4d9b-8a60-59a053700b45'
+
+GameConfig:
+
+SignConfig:
+  SignaturePublicFile: ./pub.pem
+  SignServerURL: 'http://107.167.178.129:8085'
+  SignResultServerURL: 'http://35.201.164.153:8086'
+  SignRequestNum: 100
+HTTPSConfig:
+  CertFile: ./cert.pem
+  KeyFile: ./key.pem
+ServerConfig:
+  RunMode: info
+  HttpPort: '8889'
+  ReadTimeout: 0
+  WriteTimeout: 0
+  JWTExpireTimeMinute: 43200
+  JWTSecret: connexion.games
+  TLSCAFile: ./test.pem
+  TLSCAKey: ./test.key
+  LogOut: ##stdout
+MysqlConfig:
+  UseCA: true
+  IP: 34.81.246.151
+  SSHPort: 22
+  SSHAccount: 'ubuntu'
+  SSHKey: './g-dev.cer'
+  ConnPort: 3306
+  Account: root
+  Password: K20kyfl2*g
+  SqlName: connexionSDK
+  MaxOpenConns: 100
+  MaxIdleConns: 20
+  MaxLifetime: 3600
+RedisConfig:
+  UseCA: false
+  IP: ''
+  SSHPort: 22
+  SSHAccount: ''
+  SSHKey: ''
+  Name: ''
+  Password: ''
+  Host: 'localhost:6379'
+  DB: 0
+  MinIdleConns: 20
+MiddlewareLogConfig:
+  VisitLogFile: ./log/visit.log
+  RecoverLogFile: ./log/recover.log
+  SkipPath: []
+NetworkChain:
+  bsc-test: 97
+  rinkeby: 4
+  ethereum: 1
+  bsc: 56
+  zk-test: 280
+ChainToken:
+  '1':
+    TokenName: ETH
+    Decimal: 18
+  '4':
+    TokenName: ETH
+    Decimal: 18
+  '56':
+    TokenName: BNB
+    Decimal: 18
+  '97':
+    TokenName: BNB
+    Decimal: 18
+  '280':
+    TokenName: ZKT
+    Decimal: 18
+SkyWalkingConfig:
+  ServerName: gosdk-test
+  SkyRPCNode: '192.168.6.5:11800'
+  KeyGameWithdraw: gameWithdraw
+  KeyRiskReview: riskReview
+  KeyWithdraw: withdraw
+  ValueGameWithdraw: gameserver/withdraw
+  ValueRiskReview: adminserver/riskReview
+  ValueWithdraw: dashboard/prewithdraw
+AssetSortConfig: '{"ArchLootPart":10,"BOSSChest":9,"CommonChest":8,"RepairingPotion":7}'
+PassAssetConfig: '{"AdventurerPass":"26092","CollectorPass":"26093","GoblinPass":"26090"}'
